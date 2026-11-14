@@ -65,7 +65,9 @@ Each repository documents its decisions, test coverage and known limitations alo
 - Delivered transaction processing and reconciliation capabilities supporting millions of dollars in financial activity.
 - Built secure government-facing applications with identity, authorization, accessibility, and auditability requirements.
 
-## How I work
+## Engineering Leadership in Practice
+
+I approach engineering leadership by connecting technical decisions to delivery, reliability, cost, and business outcomes. I prefer clear tradeoffs, small reviewable changes, and evidence over assumptions.
 
 Good delivery is a loop. What happens in production should change what the team builds next and how it builds it.
 
@@ -79,11 +81,16 @@ flowchart TD
     E -- Reliability, cost, security --> C
 ```
 
-- Start with the user problem and business outcome.
-- Choose architecture the team can operate and maintain.
-- Deliver small, reviewable changes and involve QA early.
-- Treat security, reliability, and operating costs as product decisions.
-- Use AI with evaluation and appropriate human review.
+What that looks like in my own repositories:
+
+| Practice | Where to see it |
+|---|---|
+| Write decisions down with the alternatives, risks and the conditions for revisiting them | [Masters Cycling Lab decisions](https://github.com/kchan1028/masters-cycling-lab/blob/main/docs/decisions/README.md) · [Sprint Progress Analyzer decisions](https://github.com/kchan1028/sprint-progress-analyzer/blob/main/docs/decisions/README.md) · [System Design Lab decisions](https://github.com/kchan1028/system-design-lab#key-decisions-and-alternatives) |
+| Adopt a change only when the evidence holds up | Hybrid search and a reranker both helped on practice questions and were dropped because the gain didn't hold on held-out questions ([evaluation](https://github.com/kchan1028/masters-cycling-lab/blob/main/docs/evaluation.md#experiments-dev-only)) |
+| Assess operational readiness honestly, risk by risk | Masters Cycling Lab [readiness](https://github.com/kchan1028/masters-cycling-lab/blob/main/docs/production-readiness.md) and [risks](https://github.com/kchan1028/masters-cycling-lab/blob/main/docs/risk-register.md) · Sprint Progress Analyzer [readiness](https://github.com/kchan1028/sprint-progress-analyzer/blob/main/docs/production-readiness.md) and [risks](https://github.com/kchan1028/sprint-progress-analyzer/blob/main/docs/risk-register.md) |
+| Show users what the data can't tell them | CSV imports mark scope history "Unavailable" instead of guessing it ([case study](https://github.com/kchan1028/sprint-progress-analyzer/blob/main/docs/product-case-study.md#the-scope-decision)) |
+| Treat security and cost as design inputs | A written [threat model](https://github.com/kchan1028/masters-cycling-lab/blob/main/SECURITY.md) for a local RAG app; trust boundaries and cost reasoning in every [System Design Lab](https://kchan1028.github.io/system-design-lab/) study |
+| Ship small, reviewable changes with checks on every pull request | CI with pinned actions and dependency review in [Masters Cycling Lab](https://github.com/kchan1028/masters-cycling-lab/blob/main/docs/operations.md#continuous-integration) and [Sprint Progress Analyzer](https://github.com/kchan1028/sprint-progress-analyzer/blob/main/README.md#validation) |
 
 ## Technical capabilities
 
