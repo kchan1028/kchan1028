@@ -33,7 +33,7 @@ Current independent work, separate from the impact above.
 
 | Project | What it does |
 |---|---|
-| [System Design Lab](https://kchan1028.github.io/system-design-lab/) · [Source](https://github.com/kchan1028/system-design-lab) | Five original architecture studies, from event-driven orders to permission-aware RAG search, with trust boundaries, failure handling, explicit tradeoffs, and decision records, plus an interactive component explorer and tradeoff analyzer. Design exercises, not production systems. |
+| [System Design Lab](https://kchan1028.github.io/system-design-lab/) · [Source](https://github.com/kchan1028/system-design-lab) | Six original architecture studies, from a global voice platform to permission-aware RAG search, with trust boundaries, failure handling, explicit tradeoffs, and decision records, plus an interactive component explorer and tradeoff analyzer. Design exercises, not production systems. |
 | [FedPath](https://gofedpath.com) | Helps small businesses discover government opportunities and work through bid decisions and proposal preparation. |
 | [Useful Little Tools](https://usefullittletools.app) | Practical tools for developers, engineering teams, and people learning technical concepts. |
 | [Berkeley Omnium](https://berkeleyomnium.com) | Community cycling event website, built and maintained with a focus on clear information and mobile usability. |
