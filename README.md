@@ -26,7 +26,6 @@ The thread through all of it: technical decisions are business decisions. Archit
 - Built and led a 30+ person engineering and operations organization, owning architecture, delivery, vendors, and platform reliability.
 - Delivered transaction processing and reconciliation capabilities supporting millions of dollars in financial activity.
 - Built secure government-facing applications with identity, authorization, accessibility, and auditability requirements.
-- Integrated Snowflake Document AI into production document workflows with human review.
 
 ## Products and projects
 
