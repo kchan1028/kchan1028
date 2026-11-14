@@ -2,11 +2,11 @@
 
 # KC Chan
 
-**Engineering leadership · Product development · Systems architecture**
+**Engineering Leadership · Product Engineering · Systems Architecture**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-kalunchan.dev-1f2937?style=flat-square)](https://kalunchan.dev)
+[![System Design Lab](https://img.shields.io/badge/System_Design_Lab-case_studies-0f766e?style=flat-square)](https://kchan1028.github.io/system-design-lab/)
 [![FedPath](https://img.shields.io/badge/FedPath-gofedpath.com-2563eb?style=flat-square)](https://gofedpath.com)
-[![Useful Little Tools](https://img.shields.io/badge/Tools-usefullittletools.app-059669?style=flat-square)](https://usefullittletools.app)
 
 </div>
 
@@ -14,7 +14,45 @@
 
 I'm an engineering leader who has worked across startups, enterprise organizations, SaaS, digital publishing, and government technology. My background spans software development, architecture, cloud infrastructure, cybersecurity, and carrier networks.
 
-The thread through all of it: technical decisions are business decisions. Architecture choices show up later as delivery speed, reliability, operating costs, and how easily the next team can maintain the system. I try to make those tradeoffs visible early, while they're still cheap to change, and I stay close enough to the code and the customers to know when a plan needs to shift.
+Technical decisions are business decisions. Architecture choices show up later as delivery speed, reliability, operating costs, and how easily the next team can maintain the system. I make those tradeoffs visible early, while they're still cheap to change, and I stay close enough to the code and the customers to know when a plan needs to shift.
+
+## Featured engineering work
+
+Each repository documents its decisions, test coverage and known limitations alongside the code.
+
+### [Masters Cycling Lab](https://github.com/kchan1028/masters-cycling-lab)
+
+**Problem:** AI answers about research are hard to trust when you can't see which passage they came from.
+
+**What it does:** Upload research PDFs, search them, and ask questions. Every claim in an answer cites the exact passage and PDF page, and the server rejects citations to passages the model wasn't given.
+
+**Decisions:** No RAG framework, so retrieval and citation checks stay inspectable. PostgreSQL doubles as a leased job queue. Exact pgvector search comes before approximate indexes. Answers work with any OpenAI-compatible model.
+
+**Evidence:** 74 human-reviewed test questions across dev and held-out splits. Paper-level recall is close to target, and passage-level recall is the documented weakness.
+
+**Stack:** Python, FastAPI, PostgreSQL + pgvector, React, TypeScript, Docker Compose · [Evaluation](https://github.com/kchan1028/masters-cycling-lab/blob/main/docs/evaluation.md) · [Decision records](https://github.com/kchan1028/masters-cycling-lab/tree/main/docs/decisions)
+
+### [Sprint Progress Analyzer](https://github.com/kchan1028/sprint-progress-analyzer)
+
+**Problem:** Sprint reviews drift into status reading when nobody can see how scope changed or where work is stuck.
+
+**What it does:** Imports a Jira CSV in the browser and shows commitment versus current scope, blocked and aging work, and missing estimates, with explainable risk signals.
+
+**Decisions:** Local-first, with no backend and no Jira credentials. Pure calculation functions are tested separately from the UI. Risk signals show their thresholds. It's a heuristic, not a forecast.
+
+**Evidence:** Unit tests for parsing and scope accounting, Playwright and axe checks for the import journey, and a documented list of data limitations. The demo data is synthetic.
+
+**Stack:** TypeScript, React, Vite, Vitest, Playwright · [Case study](https://github.com/kchan1028/sprint-progress-analyzer/blob/main/docs/product-case-study.md) · [User guide](https://github.com/kchan1028/sprint-progress-analyzer/blob/main/docs/user-guide.md)
+
+### [System Design Lab](https://github.com/kchan1028/system-design-lab)
+
+**Problem:** Most system design write-ups skip the failure modes, security boundaries and operating costs that decide whether a design works.
+
+**What it does:** Six original case studies: a voice platform, document processing, event-driven orders, multi-tenant SaaS, a high-traffic API and RAG search. Each has requirements, trust boundaries, failure handling, cost reasoning and ADRs.
+
+**Decisions:** Assumptions are labelled, and capacity arithmetic is never called a benchmark. The Document Processing study adds an interactive architecture explorer, a tradeoff analyzer and a deterministic failure simulation. These are design exercises, not production systems.
+
+**Stack:** TypeScript, React, Mermaid, GitHub Pages · [Read the studies](https://kchan1028.github.io/system-design-lab/)
 
 ## Selected impact
 
@@ -26,18 +64,6 @@ The thread through all of it: technical decisions are business decisions. Archit
 - Built and led a 30+ person engineering and operations organization, owning architecture, delivery, vendors, and platform reliability.
 - Delivered transaction processing and reconciliation capabilities supporting millions of dollars in financial activity.
 - Built secure government-facing applications with identity, authorization, accessibility, and auditability requirements.
-
-## Products and projects
-
-Current independent work, separate from the impact above.
-
-| Project | What it does |
-|---|---|
-| [System Design Lab](https://kchan1028.github.io/system-design-lab/) · [Source](https://github.com/kchan1028/system-design-lab) | Six original architecture studies, from a global voice platform to permission-aware RAG search, with trust boundaries, failure handling, explicit tradeoffs, and decision records, plus an interactive component explorer and tradeoff analyzer. Design exercises, not production systems. |
-| [FedPath](https://gofedpath.com) | Helps small businesses discover government opportunities and work through bid decisions and proposal preparation. |
-| [Useful Little Tools](https://usefullittletools.app) | Practical tools for developers, engineering teams, and people learning technical concepts. |
-| [Berkeley Omnium](https://berkeleyomnium.com) | Community cycling event website, built and maintained with a focus on clear information and mobile usability. |
-| [kalunchan.dev](https://kalunchan.dev) | Portfolio and writing on engineering leadership, architecture, delivery, and lessons from building products. |
 
 ## How I work
 
@@ -59,19 +85,27 @@ flowchart TD
 - Treat security, reliability, and operating costs as product decisions.
 - Use AI with evaluation and appropriate human review.
 
-## Technical background
+## Technical capabilities
 
-**Application development:** Python, Django, FastAPI, TypeScript, React, Next.js, Ruby on Rails
+**Application engineering:** Python, Django, FastAPI, TypeScript, React, Next.js, Ruby on Rails
 
-**Data and messaging:** PostgreSQL, Redis, Celery, Kafka
+**Distributed systems and data:** PostgreSQL, Redis, Celery, Kafka, event-driven architecture, job queues and idempotent processing
 
-**Infrastructure and delivery:** AWS, Terraform, Docker, GitHub Actions
+**Cloud and infrastructure:** AWS, Terraform, Docker, GitHub Actions, carrier networks
 
-**Systems:** Distributed systems, event-driven architecture, identity and authorization, document workflows
+**Security and reliability:** Identity and authorization, auditability, accessibility, threat modelling, failure recovery
+
+**Applied AI and evaluation:** Retrieval-augmented generation, pgvector, retrieval evaluation, cited answers, human review of AI output
+
+## Products
+
+- [FedPath](https://gofedpath.com): helps small businesses discover government opportunities and work through bid decisions and proposal preparation.
+- [Useful Little Tools](https://usefullittletools.app): practical tools for developers, engineering teams, and people learning technical concepts.
+- [Berkeley Omnium](https://berkeleyomnium.com): a community cycling event website, built for clear information and mobile use.
 
 ## Beyond engineering
 
-I ride bikes and help organize community bike racing, including the [Berkeley Omnium](https://berkeleyomnium.com). Race days run on the same things good platforms do: clear information, planning for what can go wrong, and volunteers who know their roles.
+I ride bikes and help organize community bike racing, including the Berkeley Omnium.
 
 ## Contact
 
