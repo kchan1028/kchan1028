@@ -50,7 +50,7 @@ Each repository documents its decisions, test coverage and known limitations alo
 
 **What it does:** Six original case studies: a voice platform, document processing, event-driven orders, multi-tenant SaaS, a high-traffic API and RAG search. Each has requirements, trust boundaries, failure handling, cost reasoning and ADRs.
 
-**Decisions:** Assumptions are labelled, and capacity arithmetic is never called a benchmark. A deterministic simulation exercises the failure scenarios for one study.
+**Decisions:** Assumptions are labelled, and capacity arithmetic is never called a benchmark. The Document Processing study adds an interactive architecture explorer, a tradeoff analyzer and a deterministic failure simulation. These are design exercises, not production systems.
 
 **Stack:** TypeScript, React, Mermaid, GitHub Pages · [Read the studies](https://kchan1028.github.io/system-design-lab/)
 
@@ -64,7 +64,6 @@ Each repository documents its decisions, test coverage and known limitations alo
 - Built and led a 30+ person engineering and operations organization, owning architecture, delivery, vendors, and platform reliability.
 - Delivered transaction processing and reconciliation capabilities supporting millions of dollars in financial activity.
 - Built secure government-facing applications with identity, authorization, accessibility, and auditability requirements.
-- Integrated Snowflake Document AI into production document workflows with human review.
 
 ## How I work
 
@@ -96,7 +95,7 @@ flowchart TD
 
 **Security and reliability:** Identity and authorization, auditability, accessibility, threat modelling, failure recovery
 
-**Applied AI and evaluation:** Retrieval-augmented generation, pgvector, retrieval evaluation, Snowflake Document AI, human review in document workflows
+**Applied AI and evaluation:** Retrieval-augmented generation, pgvector, retrieval evaluation, cited answers, human review of AI output
 
 ## Products
 
