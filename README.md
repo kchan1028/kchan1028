@@ -58,6 +58,7 @@ Each repository documents its decisions, test coverage and known limitations alo
 
 - **[SprintLab](https://github.com/kchan1028/sprintlab):** a backlog, board and sprint tracker for one developer, planned and built in its own sprints, with a written review and retro for each one and an [AI collaboration log](https://github.com/kchan1028/sprintlab/blob/main/docs/ai-collaboration-log.md). React, TypeScript, Vitest, Playwright.
 - **[RideWind](https://github.com/kchan1028/ridewind):** forecast headwinds, crosswinds and tailwinds along a GPX route at the time you'll ride each section. Runs in the browser with no account, and the route file never leaves it. TypeScript, Vite, Leaflet · [Open RideWind](https://kchan1028.github.io/ridewind/)
+- **[CycleReg](https://github.com/kchan1028/event-registration)** (in progress): a proposed registration and race-day platform for volunteer-run U.S. road races and criteriums. A local prototype covers category setup with shared field limits, rider checkout with a simulated payment, and check-in. Real payments, license checks and sign-in aren't built yet. TypeScript, React, Fastify, SQLite · [Product brief](https://github.com/kchan1028/event-registration/blob/main/product.md)
 
 ## Selected impact
 
