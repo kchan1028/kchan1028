@@ -54,6 +54,11 @@ Each repository documents its decisions, test coverage and known limitations alo
 
 **Stack:** TypeScript, React, Mermaid, GitHub Pages · [Read the studies](https://kchan1028.github.io/system-design-lab/)
 
+### More public projects
+
+- **[SprintLab](https://github.com/kchan1028/sprintlab):** a backlog, board and sprint tracker for one developer, planned and built in its own sprints, with a written review and retro for each one and an [AI collaboration log](https://github.com/kchan1028/sprintlab/blob/main/docs/ai-collaboration-log.md). React, TypeScript, Vitest, Playwright.
+- **[RideWind](https://github.com/kchan1028/ridewind):** forecast headwinds, crosswinds and tailwinds along a GPX route at the time you'll ride each section. Runs in the browser with no account, and the route file never leaves it. TypeScript, Vite, Leaflet · [Open RideWind](https://kchan1028.github.io/ridewind/)
+
 ## Selected impact
 
 | 400,000+ | 30+ | 3 continents |
