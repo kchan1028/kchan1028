@@ -60,7 +60,7 @@ Each repository documents its decisions, test coverage and known limitations alo
 - **[RideWind](https://github.com/kchan1028/ridewind):** forecast headwinds, crosswinds and tailwinds along a GPX route at the time you'll ride each section. Runs in the browser with no account, and the route file never leaves it. TypeScript, Vite, Leaflet · [Open RideWind](https://kchan1028.github.io/ridewind/)
 - **[CycleReg](https://github.com/kchan1028/event-registration)** (in progress): a proposed registration and race-day platform for volunteer-run U.S. road races and criteriums. A local prototype covers category setup with shared field limits, rider checkout with a simulated payment, and check-in. Real payments, license checks and sign-in aren't built yet. TypeScript, React, Fastify, SQLite · [Product brief](https://github.com/kchan1028/event-registration/blob/main/product.md)
 
-### Open-source contributions
+### Contributions to other projects
 
 - **[Volunteer](https://github.com/paulhainsworth/volunteer):** a volunteer signup and roster app for bike race organizers, maintained by Paul Hainsworth. I've contributed 40+ merged pull requests, mostly security hardening and test coverage: tighter Supabase row-level access to contact and emergency-contact data, authorized and rate-limited sign-in mail, named admin invitations in place of a shared setup, guardian consent for minor volunteers, a reproducible local database bootstrap, and Playwright regression tests for volunteers, leaders and admins. Svelte, Supabase (PostgreSQL), Vercel · [My pull requests](https://github.com/paulhainsworth/volunteer/pulls?q=is%3Apr+author%3Akchan1028)
 
